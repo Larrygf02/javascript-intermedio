@@ -46,12 +46,21 @@ let getSalario = (empleado) => {
 
 
 getEmpleado(3).then(empleado => {
-    //console.log(`Empledo DB`, empleado)
-    getSalario(empleado).then(salario => {
+    console.log(`Empledo DB`, empleado)
+    /*getSalario(empleado).then(salario => {
         console.log(`Salario DB`, salario)
     }, (err) => {
         console.log(err)
-    })
-}, (err) => {
-    console.log(err);
+    })*/
+}, (err) => console.log(err))
+
+//  PROMESAS EN CADENA
+
+getEmpleado(4).then(empleado => {
+    return getSalario(empleado)
 })
+.then(salario => {
+    console.log(`El salario de ${salario.nombre} es ${salario.salario}`)
+})
+.catch(err => console.log(err))
+
