@@ -37,3 +37,22 @@ set.add(1)
 set.add(2)
 
 console.log(set);
+//Using map
+let jhon = { name: 'Jhon'}
+let visits = new Map()
+visits.set(jhon, 34)
+
+
+jhon = null
+console.log(visits);
+console.log(visits.size); //1
+
+//using weak Map
+let juan = { name: 'Juan'}
+let visitsName = new WeakMap()
+visitsName.set(juan, 34)
+
+
+jhon = null
+console.log(visitsName);
+console.log(visitsName.size);
