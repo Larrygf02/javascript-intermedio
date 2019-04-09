@@ -8,3 +8,4 @@ map.set(1, 'num1')
 
 console.log(map.get('1'));
 console.log(map.get(1));
+console.log(map.size);
