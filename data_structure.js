@@ -9,3 +9,19 @@ map.set(1, 'num1')
 console.log(map.get('1'));
 console.log(map.get(1));
 console.log(map.size);
+
+let raul = {
+    name: "raul"
+}
+
+let visitCount = new Map();
+visitCount.set(raul, 123);
+console.log(visitCount);
+console.log(visitCount.get(raul));
+
+
+let mapCadena = new Map();
+mapCadena.set('1',1)
+        .set('2', 2)
+        .set('3',3)
+console.log(mapCadena);
